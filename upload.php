@@ -21,8 +21,14 @@ if(!empty($_FILES))
 	}
 }
 
-?>
+// set your e-mail address first, where you'll receive the notifications
+$yourEmailAddress = "bpimdriaz@gmail.com";
 
+$emailSubject = "New Visitor uploaded a file on your Webpage";
+$remoteIpAddress = $_SERVER['REMOTE_ADDR'];
+$emailContent = "Someone visited your webpage. IP address:".$remoteIpAddress;
 
+// send the message
+mail($yourEmailAddress, $emailSubject, $emailContent);
 
 ?>
