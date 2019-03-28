@@ -1,2 +1,1 @@
-# UploadbyPHP-JS
-Upload any file with a progressbar using js &amp; php
+Unique desin & simple interface for uploading any files on web server with some simmle php code....
