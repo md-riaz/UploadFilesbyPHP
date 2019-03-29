@@ -36,8 +36,11 @@ else{
 // set your e-mail address first, where you'll receive the notifications
 $yourEmailAddress = "bpimdriaz@gmail.com";
 $emailSubject = "New Visitor uploaded a file on your Webpage";
-$remoteIpAddress = $_SERVER['REMOTE_ADDR'];
-$emailContent = "Someone visited your webpage. IP address:".$remoteIpAddress;
+$ipaddress = $_SERVER['REMOTE_ADDR'];
+$page = "http://".$_SERVER['HTTP_HOST']."".$_SERVER['PHP_SELF'];
+$referrer = $_SERVER['HTTP_REFERER'];
+$datetime = date("F j, Y, g:i a");
+$emailContent = "Someone visited your webpage. IP address:".$ipaddress."Last Visited Page:".$page."Referrer".$referrer."Time:".$datetime;
 
 // send the message
 mail($yourEmailAddress, $emailSubject, $emailContent);
