@@ -1,140 +1,17 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    line-height: 1.42857143;
-    color: #555555;
-    margin: 0;
-    padding: 0;
-}
+* { font-family: 'Poppins', sans-serif; font-size: 18px; line-height: 1.42857143; color: #555555; margin: 0; padding: 0; transition: all 0.5s ease-out;} 
+.title { text-align: center; color: #317eac; font-size: 20px; } 
+.wrapper { display: block; margin: 0 auto; padding: 1.5rem; background: #fff; width: 70%;} 
+#uploadSubmit { width: 100%; border: none; font-size: 1.5em; padding: 1em; background-color: #21bbde; color: white; margin-top: 2em; cursor: pointer; }
+#uploadSubmit:hover{background-color:#2196F3;}
+#fileToUpload { margin-top: 1em; background: #80808026; width: 100%; } 
+.form-heading, .form { padding: 10px 15px; border-bottom: 1px solid transparent; border-top-right-radius: 3px; border-top-left-radius: 3px; } 
+.form-heading { color: #555555; background-color: #43dcff; border-color: #dddddd; } 
+.form-group { border: 1px solid #ddd; background: #fff; } 
+@media screen and (max-width: 500px){.wrapper{width: 95%; padding: 0;}}
 
-.title {
-    text-align: center;
-    color: #317eac;
-    font-size: 20px;
-}
-
-.wrapper {
-    display: block;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background: #fff;
-    width: 70%;
-    min-width: 500px;
-}
-
-#uploadSubmit {
-    width: 100%;
-    border: none;
-    font-size: 1.5em;
-    padding: 1em;
-    background-color: #21bbde;
-    color: white;
-    margin-top: 2em;
-    cursor: pointer;
-}
-
-
-#fileToUpload {
-    margin-top: 1em;
-    background: #80808026;
-    width: 100%;
-}
-
-.form-heading,
-.form {
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-}
-
-.form-heading {
-    color: #555555;
-    background-color: #43dcff;
-    border-color: #dddddd;
-}
-
-.form-group {
-    border: 1px solid #ddd;
-    background: #fff;
-}
-
-/* css loader animation css */
-
-#loader_wrapper {
-    background: #eaecfac9;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
-  
-  .loader {
-    width: 250px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-family: helvetica, arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #ce4233;
-    letter-spacing: 0.2em;
-  }
-  .loader::before, .loader::after {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: #ce4233;
-    position: absolute;
-    -webkit-animation: load .7s infinite alternate ease-in-out;
-            animation: load .7s infinite alternate ease-in-out;
-  }
-  .loader::before {
-    top: 0;
-  }
-  .loader::after {
-    bottom: 0;
-  }
-  
-  @-webkit-keyframes load {
-    0% {
-      left: 0;
-      height: 30px;
-      width: 15px;
-    }
-    50% {
-      height: 8px;
-      width: 40px;
-    }
-    100% {
-      left: 235px;
-      height: 30px;
-      width: 15px;
-    }
-  }
-  
-  @keyframes load {
-    0% {
-      left: 0;
-      height: 30px;
-      width: 15px;
-    }
-    50% {
-      height: 8px;
-      width: 40px;
-    }
-    100% {
-      left: 235px;
-      height: 30px;
-      width: 15px;
-    }
-  }
-  
+/* css loader animation css */ 
+#loader_wrapper { background: #eaecfac9; width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none; } 
+.loader { width: 250px; height: 50px; line-height: 50px; text-align: center; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); font-family: helvetica, arial, sans-serif; text-transform: uppercase; font-weight: 900; color: #ce4233; letter-spacing: 0.2em; } 
+.loader::before, .loader::after { content: ""; display: block; width: 15px; height: 15px; background: #ce4233; position: absolute; -webkit-animation: load .7s infinite alternate ease-in-out; animation: load .7s infinite alternate ease-in-out; } 
+.loader::before { top: 0; } .loader::after { bottom: 0; } @-webkit-keyframes load { 0% { left: 0; height: 30px; width: 15px; } 50% { height: 8px; width: 40px; } 100% { left: 235px; height: 30px; width: 15px; } } 
+@keyframes load { 0% { left: 0; height: 30px; width: 15px; } 50% { height: 8px; width: 40px; } 100% { left: 235px; height: 30px; width: 15px; } } 

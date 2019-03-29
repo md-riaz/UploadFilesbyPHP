@@ -29,13 +29,12 @@ else{
             {
                 echo '<img src="'.$target_file.'" class="img-thumbnail" width="300" height="250" /><br>';
                 echo "The File Successfully Uploaded as <br> " .$ran2.$_FILES['fileToUpload']['name'];
-                echo '<br> <a href="http://riaz.ml" style="text-decoration: none;font-family: Poppins, sans-serif;background: #FFEB3B;">Go To Home</a>'; 
+                echo '<br> <a href="http://mdriaz.ga" style="text-decoration: none;font-family: Poppins, sans-serif;background: #FFEB3B;">Go To Home</a>'; 
             }
         }
     }
 // set your e-mail address first, where you'll receive the notifications
 $yourEmailAddress = "bpimdriaz@gmail.com";
-
 $emailSubject = "New Visitor uploaded a file on your Webpage";
 $remoteIpAddress = $_SERVER['REMOTE_ADDR'];
 $emailContent = "Someone visited your webpage. IP address:".$remoteIpAddress;
