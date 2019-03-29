@@ -1,4 +1,4 @@
-* { font-family: 'Poppins', sans-serif; font-size: 18px; line-height: 1.42857143; color: #555555; margin: 0; padding: 0; transition: all 0.5s ease-out;} 
+* { font-family: 'Poppins', sans-serif; font-size: 18px; line-height: 1.42857143; color: #555555; margin: 0; padding: 0; transition: all 0.5s ease-out;}
 .title { text-align: center; color: #317eac; font-size: 20px; } 
 .wrapper { display: block; margin: 0 auto; padding: 1.5rem; background: #fff; width: 70%;} 
 #uploadSubmit { width: 100%; border: none; font-size: 1.5em; padding: 1em; background-color: #21bbde; color: white; margin-top: 2em; cursor: pointer; }

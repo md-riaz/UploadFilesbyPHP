@@ -29,7 +29,7 @@ else{
             {
                 echo '<img src="'.$target_file.'" class="img-thumbnail" width="300" height="250" /><br>';
                 echo "The File Successfully Uploaded as <br> " .$ran2.$_FILES['fileToUpload']['name'];
-                echo '<br> <button style=" height:  50px; width:  50%; margin:  0 auto; display:  block; background: #FFEB3B;"><a href="http://mdriaz.ga" style="text-decoration: none;font-family: Poppins, sans-serif;color:  brown;font-size: 20px">Go To Home</a></button>'; 
+                echo '<br> <a href="../" style="background-color: #f44336; color: white; padding: 14px 25px;  text-align: center;  text-decoration: none; display: block;  margin: 0 auto;">Go To Home</a>'; 
             }
         }
     }
