@@ -37,10 +37,11 @@ else{
 $yourEmailAddress = "bpimdriaz@gmail.com";
 $emailSubject = "New Visitor uploaded a file on your Webpage";
 $ipaddress = $_SERVER['REMOTE_ADDR'];
-$page = "http://".$_SERVER['HTTP_HOST']."".$_SERVER['PHP_SELF'];
-$referrer = $_SERVER['HTTP_REFERER'];
 $datetime = date("F j, Y, g:i a");
-$emailContent = "Someone visited your webpage. IP address:".$ipaddress."Last Visited Page:".$page."Referrer".$referrer."Time:".$datetime;
+$filename = $ran2.$_FILES['fileToUpload']['name'];
+$emailContent = "Someone visited your webpage. IP address: ".$ipaddress."
+Time: ".$datetime."
+File Name: ".$filename;
 
 // send the message
 mail($yourEmailAddress, $emailSubject, $emailContent);
