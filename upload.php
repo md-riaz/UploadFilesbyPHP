@@ -11,11 +11,14 @@ $source_path = $_FILES['fileToUpload']['tmp_name'];
 //combine file name with random number & set file directory.
 $target_file = 'upload/' .$ran2.$_FILES['fileToUpload']['name'];
 $uploadOk = 1; //if condition is not fullfilled set this to 0.
+
+//if no file is selected
 if($_FILES['fileToUpload']['tmp_name'] == "") {
     $uploadOk = 0;
     }else{
         $uploadOk = 1;
     }
+	
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file.";
@@ -27,9 +30,7 @@ else{
             sleep(1);
             if(move_uploaded_file($source_path, $target_file))
             {
-                echo '<img src="'.$target_file.'" class="img-thumbnail" width="300" height="250" /><br>';
                 echo "The File Successfully Uploaded as <br> " .$ran2.$_FILES['fileToUpload']['name'];
-                echo '<br> <a href="../" style="background-color: #f44336; color: white; padding: 14px 25px;  text-align: center;  text-decoration: none; display: block;  margin: 0 auto;">Go To Home</a>'; 
             }
         }
     }
@@ -38,10 +39,9 @@ $yourEmailAddress = "bpimdriaz@gmail.com";
 $emailSubject = "New Visitor uploaded a file on your Webpage";
 $ipaddress = $_SERVER['REMOTE_ADDR'];
 $datetime = date("F j, Y, g:i a");
-$filename = $ran2.$_FILES['fileToUpload']['name'];
 $emailContent = "Someone visited your webpage. IP address: ".$ipaddress."
 Time: ".$datetime."
-File Name: ".$filename;
+File Name: ".$target_file;
 
 // send the message
 mail($yourEmailAddress, $emailSubject, $emailContent);
