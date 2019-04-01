@@ -89,10 +89,12 @@
 		}
 		//function for Progressbar & file size displaying
 		function progressHandler(event) {
-			_("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+			var total_size = (event.total/1048576).toFixed(2); //byte divided by 1048576 for byte to MB
+			var loaded_size = (event.loaded/1048576).toFixed(2);
+			_("loaded_n_total").innerHTML = "Uploaded " + loaded_size + " MB of " + total_size + " MB ";
 			var percent = (event.loaded / event.total) * 100;
 			_("progressBar").value = Math.round(percent);
-			_("status").innerHTML = Math.round(percent) + "% Uploaded...";
+			_("status").innerHTML = Math.round(percent) + "%";
 		}
 		//Function on file upload completed
 		function completeHandler(event) {
