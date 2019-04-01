@@ -73,7 +73,7 @@
 		//main function for ajax file upload
 		function myFunction() {
 			//Javascript for renaming submit button on click
-			_("uploadSubmit").value = "Please wait..";
+			_("uploadSubmit").value = "Please wait till Successfull.....";
 			//AJAX Codes
 			var file = _("fileToUpload").files[0];
 			var formdata = new FormData(); //creating empty formdata object
