@@ -60,13 +60,6 @@
 		function _(ele) {
 			return document.getElementById(ele);
 		}
-
-		//remove brand
-		window.onload = () => {
-			let el = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
-			el.parentNode.removeChild(el);
-		}
-
 		//remove disabled attribute from submit button
 		_("fileToUpload").addEventListener("change", function () {
 			_("uploadSubmit").removeAttribute("disabled");
