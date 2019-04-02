@@ -9,7 +9,7 @@ $ran2 = $ran."___";
 $source_path = $_FILES['fileToUpload']['tmp_name'];
 
 //combine file name with random number & set file directory.
-$target_file = 'upload/' .$ran2.$_FILES['fileToUpload']['name'];
+$target_file = '../upload/' .$ran2.$_FILES['fileToUpload']['name'];
 $uploadOk = 1; //if condition is not fullfilled set this to 0.
 
 //if no file is selected

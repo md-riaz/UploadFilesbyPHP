@@ -11,7 +11,7 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="MD Riaz">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="favicon.png" rel="icon" type="image/x-icon" />
+	<link href="assets/favicon.png" rel="icon" type="image/x-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -34,7 +34,7 @@
 <!-- PHP code for visit counter -->
 		<?php
            if(!isset($_SESSION['counter'])) { // It's the first visit in this session
-             $handle = fopen("counter.txt", "r"); 
+             $handle = fopen("assets/counter.txt", "r"); 
              if(!$handle){ 
               echo "Could not open the file" ;
                } 
@@ -43,7 +43,7 @@
                 fclose ($handle) ;
                 $counter++ ; 
                 echo" <p> Visitor Count: ". $counter . " </p> " ; 
-                $handle = fopen("counter.txt", "w" ) ; 
+                $handle = fopen("assets/counter.txt", "w" ) ; 
                 fwrite($handle,$counter) ; 
                 fclose ($handle) ;
                 $_SESSION['counter'] = $counter;
@@ -80,7 +80,7 @@
 			ajax.addEventListener("load", completeHandler, false); //Show a messege when upload is completed
 			ajax.addEventListener("error", errorHandler, false); //Show a messege when error happen
 			ajax.addEventListener("abort", abortHandler, false); //Show a messege when upload is interrupted
-			ajax.open("POST", "upload.php"); //Specifies the type of request & request method
+			ajax.open("POST", "assets/upload.php"); //Specifies the type of request & request method
 			ajax.send(formdata); //Sends the request to the server
 		}
 		//function for Progressbar & file size displaying
