@@ -7,9 +7,9 @@
 <head>
 	<title>File Upload</title>
 	<meta charset="UTF-8">
-    <meta name="description" content="Upload files with AJAX">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="MD Riaz">
+	<meta name="description" content="Upload files with AJAX">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="MD Riaz">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="assets/favicon.png" rel="icon" type="image/x-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -31,7 +31,7 @@
 				<input type="button" id="uploadSubmit" value="Upload" onclick="myFunction()" disabled />
 			</form>
 		</div>
-<!-- PHP code for visit counter -->
+		<!-- PHP code for visit counter -->
 		<?php
            if(!isset($_SESSION['counter'])) { // It's the first visit in this session
              $handle = fopen("assets/counter.txt", "r"); 
