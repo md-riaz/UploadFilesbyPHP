@@ -11,7 +11,7 @@ _("fileToUpload").addEventListener("change", function () {
 //main function for ajax file upload
 function myFunction() {
     //Javascript for renaming submit button on click
-    _("uploadSubmit").value = "Please wait till Successfull.....";
+    _("uploadSubmit").value = "Please wait";
     //AJAX Codes
     var file = _("fileToUpload").files[0];
     var formdata = new FormData(); //creating empty formdata object
@@ -32,7 +32,7 @@ function progressHandler(event) {
     _("loaded_n_total").innerHTML = "Uploaded " + loaded_size + " MB of " + total_size + " MB ";
     var percent = (event.loaded / event.total) * 100;
     _("progressBar").value = Math.round(percent);
-    _("status").innerHTML = Math.round(percent) + "%";
+    _("status").innerHTML = "Uploading.." + Math.round(percent) + "%";
 }
 //Function on file upload completed
 function completeHandler(event) {
