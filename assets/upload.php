@@ -30,19 +30,20 @@ else{
             sleep(1);
             if(move_uploaded_file($source_path, $target_file))
             {
-                echo "The File Successfully Uploaded as <br> " .$ran2.$_FILES['fileToUpload']['name'];
+                echo 'The File Successfully Uploaded as <br><a href='.$target_file.' download>'.$ran2.$_FILES['fileToUpload']['name'].'</a>';
             }
         }
     }
 // set your e-mail address first, where you'll receive the notifications
-$yourEmailAddress = "bpimdriaz@gmail.com";
-$emailSubject = "New Visitor uploaded a file on your Webpage";
-$ipaddress = $_SERVER['REMOTE_ADDR'];
-$datetime = date("F j, Y, g:i a");
-$emailContent = "Someone visited your webpage. IP address: ".$ipaddress."
-Time: ".$datetime."
-File Name: ".$target_file;
+			$to = 'bpimdriaz@gmail.com';
+			
+			$subject = 'New Visitor uploaded a file on your Webpage';
+			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			$datetime = date("F j, Y, g:i a");
+			$emailContent = "Someone visited your webpage. 
+			Time: ".$datetime."
+			File : <a href=http://up.riaz.ml/upload/".$_FILES['fileToUpload']['name']." download>".$ran2.$_FILES['fileToUpload']['name']."</a>";
 
 // send the message
-mail($yourEmailAddress, $emailSubject, $emailContent);
+mail($to, $subject, $emailContent, $headers);
 ?>
