@@ -1,3 +1,3 @@
 Unique desin & simple interface for uploading any files on web server with some simmle php code....
 
-Visit http://uptome.ml
+Visit http://up.riaz.ml
